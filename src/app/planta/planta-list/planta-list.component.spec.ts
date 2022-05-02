@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { PlantaListComponent } from './planta-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('PlantaListComponent', () => {
   let component: PlantaListComponent;
@@ -11,6 +12,7 @@ describe('PlantaListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ PlantaListComponent ]
     })
     .compileComponents();

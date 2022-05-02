@@ -23,4 +23,34 @@ export class PlantaListComponent implements OnInit {
     this.getPlantas();
   }
 
+  get darPlantasInterior(): number{
+    let totalInterior: number = 0;
+
+    for(let index = 0; index <this.plantas.length; index ++)
+    {
+      let planta: Planta = this.plantas[index];
+      if(planta.tipo == "Interior")
+      {
+        totalInterior+=1;
+      }
+    }
+
+    return totalInterior;
+  }
+
+  get darPlantasExterior(): number{
+    let totalExterior: number = 0;
+
+    for(let index = 0; index <this.plantas.length; index ++)
+    {
+      let planta: Planta = this.plantas[index];
+      if(planta.tipo == "Exterior")
+      {
+        totalExterior+=1;
+      }
+    }
+
+    return totalExterior;
+  }
+
 }
